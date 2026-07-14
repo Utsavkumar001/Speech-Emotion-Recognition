@@ -1,0 +1,26 @@
+# Data (too large / user-specific, download instructions in README)
+data/RAVDESS/
+data/RAVDESS_dummy/
+data/dataset.csv
+data/splits/
+data/processed/
+
+# Model outputs / checkpoints
+outputs/
+saved_model/
+
+# Reports (generated, not source)
+reports/*.png
+reports/*.csv
+reports/*.json
+reports/*.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+.vscode/
