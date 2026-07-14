@@ -27,7 +27,8 @@ SAMPLE_RATE = 16000
 
 print(f"Loading model: {MODEL_ID}")
 feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained(MODEL_ID)
-model = Wav2Vec2ForSequenceClassification.from_pretrained(MODEL_ID)
+model = Wav2Vec2ForSequenceClassification.from_pretrained(MODEL_ID,torch_dtype=torch.float16,
+    low_cpu_mem_usage=True,)
 model.eval()
 
 LABELS = [model.config.id2label[i] for i in range(len(model.config.id2label))]
